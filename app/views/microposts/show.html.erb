@@ -1,0 +1,25 @@
+
+
+
+<p>
+  	<strong>Content:</strong>
+  	<%= @micropost.content %>
+</p>
+
+<p>
+  	<strong>User:</strong>
+  	<%= @micropost.user_id %>
+</p>
+<p>
+	<strong>User_name:</strong>
+	<%= @micropost.user.name %>
+</p><br>
+
+<div class="btn-group">
+	<button class = "btn btn-light">
+		<%= link_to 'Edit', edit_micropost_path(@micropost), class: "text-dark"%>
+	</button>
+	<button class = "btn btn-light">
+		<%= link_to 'Users', users_path, class: "text-dark" %>
+	</button>
+</div>

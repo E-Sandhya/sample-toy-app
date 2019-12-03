@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<h3>MICROPOSTS :</h3>
+<% @user.microposts.each do |post| %> 
+  <p>
+    
+    <%#= render :partial => 'micropost', :object =>  @user.microposts %>
+    <%= post.user_name %>
+    <%= post.content %>
+    <%#= link_to 'Edit', edit_micropost_path(micropost)%>
+    <%#= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }%>
+
+  </p><hr>
+<% end %>
+<div class = "btn-group">
+  <button class = "btn btn-light">	
+ 	  <%= link_to 'Create Micropost', new_micropost_path, class: "text-dark " %></button>
+  <button class = "btn btn-light">
+		<%= link_to 'Edit', edit_user_path(@user), class: "text-dark" %> </button>
+  <button class = "btn btn-light">
+		<%= link_to 'Back', users_path, class: "text-dark"%></button>
+</div>

@@ -1,0 +1,12 @@
+<h1>Editing Micropost</h1>
+
+<%= render 'form', micropost: @micropost %><br>
+
+<div class = "btn-group">
+	<button class = "btn btn-light">
+		<%= link_to 'Show', @micropost, class: "text-dark" %>
+	</button>
+	<button class = "btn btn-light">
+		<%= link_to 'Back', microposts_path, class: "text-dark" %>
+	</button>
+</div>
