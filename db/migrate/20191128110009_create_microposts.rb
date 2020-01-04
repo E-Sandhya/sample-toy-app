@@ -6,6 +6,6 @@ class CreateMicroposts < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    add_column :microposts, :user_name
+    # add_column :microposts, :user_name
   end
 end
